@@ -103,4 +103,9 @@ const Cart = ({ cart, cartOpen, dispatch }) => {
   );
 };
 
-export default Cart;
+const mapStateToProps = (state) => ({
+  cart: state.reducer.cart, // Replace "yourReducer" with your actual reducer name
+  cartOpen: state.yourReducer.cartOpen,
+});
+
+export default connect(mapStateToProps)(Cart);

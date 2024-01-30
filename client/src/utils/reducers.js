@@ -10,6 +10,15 @@ import {
   TOGGLE_CART,
 } from './actions';
 
+// Provide an initial state if not provided
+const initialState = {
+  products: [],
+  cart: [],
+  cartOpen: false,
+  categories: [],
+  currentCategory: '',
+};
+
 // The reducer is a function that accepts the current state and an action. It returns a new state based on that action.
 export const reducer = (state, action) => {
   switch (action.type) {
